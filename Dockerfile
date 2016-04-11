@@ -7,4 +7,6 @@ RUN apk add --update ca-certificates postfix rsyslog && rm -rf /var/cache/apk/*
 COPY files/defaults/ /defaults/
 COPY files/start.sh /start.sh
 
+RUN chmod +x /start.sh
+
 CMD ["/start.sh"]
