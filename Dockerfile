@@ -7,7 +7,7 @@ RUN apk add --update ca-certificates postfix postfix-pcre postfix-policyd-spf-pe
 COPY files/defaults/ /defaults/
 COPY files/start.sh /start.sh
 
-RUN echo "policy-spf unix - n n - - spawn user=nobody argv=/usr/sbin/postfix-policyd-spf-perl" >> /etc/postfix/master.cf &&\
+RUN echo "policy-spf unix - n n - - spawn user=nobody argv=/usr/bin/postfix-policyd-spf-perl" >> /etc/postfix/master.cf &&\
     chmod +x /start.sh
 
 CMD ["/start.sh"]
