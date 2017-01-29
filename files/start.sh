@@ -8,6 +8,7 @@ echo -e smtpd_tls_key_file = $KEY >> /etc/postfix/main.cf
 echo -e smtpd_tls_CApath = $CA >> /etc/postfix/main.cf
 echo -e smtp_tls_cert_file = $CERT >> /etc/postfix/main.cf
 echo -e smtp_tls_key_file = $KEY >> /etc/postfix/main.cf
+echo -e smtp_tls_CApath = $CA >> /etc/postfix/main.cf
 echo -e $TRANSPORT > /etc/postfix/transport
 postmap /etc/postfix/transport
 touch /etc/aliases
