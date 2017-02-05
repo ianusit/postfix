@@ -1,7 +1,6 @@
 #!/bin/sh
 rsyslogd
-rm /etc/postfix/main.cf
-rm /etc/aliases* /etc/postfix/transport*
+rm /etc/postfix/main.cf /etc/aliases* /etc/postfix/transport*
 cp /defaults/* /etc/postfix/
 sed -i "s/SERVICENAME/${SERVICENAME}/g" /etc/postfix/main.cf
 echo -e $MYNETWORKS$RELAYDOMAINS >> /etc/postfix/main.cf
