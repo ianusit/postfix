@@ -6,6 +6,7 @@ readme_directory = no
 alias_database = hash:/etc/aliases
 alias_maps = hash:/etc/aliases
 mydestination = SERVICENAME, localhost
+myhostname = SERVICENAME
 myorigin = SERVICENAME
 mailbox_size_limit = 0
 policy-spf_time_limit = 3600s
